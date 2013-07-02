@@ -48,5 +48,6 @@ public class Test1 {
 		session.save(po);
 		session.getTransaction().commit();
 		session.close();
+		
 	}
 }
