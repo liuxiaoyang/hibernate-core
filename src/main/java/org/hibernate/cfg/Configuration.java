@@ -234,7 +234,7 @@ public class Configuration implements Serializable {
 
 	protected Map<String, SQLFunction> sqlFunctions;
 	
-	private TypeResolver typeResolver = new TypeResolver();
+	private TypeResolver typeResolver = myTypeResolver();
 	private List<TypeContributor> typeContributorRegistrations = new ArrayList<TypeContributor>();
 
 	private EntityTuplizerFactory entityTuplizerFactory;
@@ -283,6 +283,10 @@ public class Configuration implements Serializable {
 
 	private ConcurrentHashMap<Class,AttributeConverterDefinition> attributeConverterDefinitionsByClass;
 
+	private TypeResolver myTypeResolver(){
+		return new TypeResolver();
+	}
+	
 	protected Configuration(SettingsFactory settingsFactory) {
 		this.settingsFactory = settingsFactory;
 		reset();

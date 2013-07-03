@@ -72,6 +72,7 @@ public class SettingsFactory implements Serializable {
 	public static final String DEF_CACHE_REG_FACTORY = NoCachingRegionFactory.class.getName();
 
 	public SettingsFactory() {
+		System.out.println("");
 	}
 
 	public Settings buildSettings(Properties props, ServiceRegistry serviceRegistry) {
