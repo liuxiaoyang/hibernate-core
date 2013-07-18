@@ -5,25 +5,28 @@ import static java.lang.Boolean.TRUE;
 
 import org.hibernate.type.descriptor.WrapperOptions;
 
-public class TempTest {
+public class WrapTest {
 
 	private final char characterValueTrue;
 	private final char characterValueTrueLC;
 
-	public TempTest() {
+	public WrapTest() {
 		this.characterValueTrue = 'Y';
 		this.characterValueTrueLC = Character
 				.toUpperCase(this.characterValueTrue);
 	}
 
 	public static void main(String[] args) {
-		TempTest tempTest = new TempTest();
-		String value = "Yes";
+		WrapTest tempTest = new WrapTest();
+		String value = "no";
 		Boolean wrapValue = tempTest.wrap(value, null);
+		System.out.println(wrapValue);
+		int value2=0;
+		wrapValue = tempTest.wrap(value2, null);
 		System.out.println(wrapValue);
 	}
 
-	public <X> Boolean wrap(X value, WrapperOptions options) {
+	public <V> Boolean wrap(V value, WrapperOptions options) {
 		if (value == null) {
 			return null;
 		}
