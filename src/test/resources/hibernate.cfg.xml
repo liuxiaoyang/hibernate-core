@@ -28,6 +28,10 @@
 <!-- <property name="hibernate.hbm2ddl.auto">update</property>-->
 
 <mapping class="mytest.SysUserPO"/>
+<mapping class="mytest.SysUserRolePO"/>
+<mapping class="mytest.SysRolePO"/>
+<mapping class="mytest.SysRoleResourcesPO"/>
+<mapping class="mytest.SysResourcesPO"/>
 </session-factory> 
  
 </hibernate-configuration>
